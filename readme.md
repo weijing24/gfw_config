@@ -2,7 +2,7 @@
 `git clone git@github.com:weijing24/gfw_config.git ~/gfw_config`
 
 ## 内核网络配置优化 
-cp ~/gfw_config/sysctl.conf /etc/sysctl.conf
+`cp ~/gfw_config/sysctl.conf /etc/sysctl.conf`
 
 ## 部署
 ### ss
