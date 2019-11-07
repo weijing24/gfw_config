@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  v2ray:
+    image: v2ray/official
+    ports:
+      - 443:10086
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      restart_policy: 
+        condition: on-failure
+    volumes:
+      - /etc/v2ray/:/etc/v2ray

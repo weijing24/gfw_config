@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+
+  ss-server:
+    image: mritd/shadowsocks:3.2.4
+    command: -s "-s 0.0.0.0 -p 6443 -m chacha20-ietf-poly1305 -k asdasd"
+    ports:
+      - 443:6443
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      restart_policy: 
+        condition: on-failure
