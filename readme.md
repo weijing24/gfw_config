@@ -34,3 +34,9 @@ cd ~/gfw_config/v2ray
 docker stack deploy -c v2ray.yml v2ray
 ```
 
+### trojan
+- docker 容器执行
+
+```
+docker run -d -v ~/gfw_config/trojan/config:/config -v ~/gfw_config/trojan/cert:/tmp  -p 443:443 --name trojan trojangfw/trojan
+```
