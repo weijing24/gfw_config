@@ -5,7 +5,7 @@ services:
     image: mritd/shadowsocks:3.2.4
     command: -s "-s 0.0.0.0 -p 6443 -m chacha20-ietf-poly1305 -k asdasd"
     ports:
-      - 443:6443
+      - 4443:6443
     deploy:
       mode: replicated
       replicas: 1
