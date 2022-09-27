@@ -1,13 +1,16 @@
 {
+  "log": {
+    "loglevel": "debug"
+  },
   "inbounds": [
     {
-      "port": 10086, // 服务器监听端口
-      "protocol": "vmess",    // 主传入协议
+      "port": 10086,
+      "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "23ad6b1-8d1a-40f7-8ad0-e3e35cd38297",  // 用户 ID，客户端与服务器必须相同
-            "alterId": 64
+            "id": "8400b8cb-04d3-4fa2-bb2f-502d7c67cccd",
+            "alterId": 0
           }
         ]
       }
@@ -15,7 +18,7 @@
   ],
   "outbounds": [
     {
-      "protocol": "freedom",  // 主传出协议
+      "protocol": "freedom",
       "settings": {}
     }
   ]
